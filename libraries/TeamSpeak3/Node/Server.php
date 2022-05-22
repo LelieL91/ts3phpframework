@@ -97,7 +97,7 @@ class TeamSpeak3_Node_Server extends TeamSpeak3_Node_Abstract
   {
     if($this->channelList === null)
     {
-      $channels = $this->request("channellist -topic -flags -voice -limits -icon -banners")->toAssocArray("cid");
+      $channels = $this->request("channellist -topic -flags -voice -limits -icon -banners -secondsempty")->toAssocArray("cid");
 
       $this->channelList = array();
 
