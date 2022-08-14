@@ -650,7 +650,7 @@ class TeamSpeak3_Node_Server extends TeamSpeak3_Node_Abstract
 
       foreach($clients as $clid => $client)
       {
-        if($this->getParent()->getExcludeQueryClients() && $client["client_type"]) continue;
+#        if($this->getParent()->getExcludeQueryClients() && $client["client_type"]) continue;
 
         $this->clientList[$clid] = new TeamSpeak3_Node_Client($this, $client);
       }
