@@ -102,7 +102,7 @@ class Server extends Node
      */
     public function channelList(array $filter = []) {
         if ($this->channelList === null) {
-            $channels = $this->request("channellist -topic -flags -voice -limits -icon")->toAssocArray("cid");
+            $channels = $this->request("channellist -topic -flags -voice -limits -icon -secondsempty")->toAssocArray("cid");
 
             $this->channelList = [];
 
